@@ -7,6 +7,10 @@ lib.addKeybind({
         if PlayerState.isLimited then return end
         if GetVehiclePedIsEntering(cache.ped) ~= 0 then return end
 
+        if cache.vehicle then
+            return
+        end
+            
         local onBike = false
 
         if cache.vehicle then
